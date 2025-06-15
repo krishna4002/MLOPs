@@ -1,0 +1,4 @@
+Assignment_3/venv/
+Assignment_3/__pycache__/
+*.pkl
+*.csv

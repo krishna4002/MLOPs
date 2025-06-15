@@ -1,0 +1,8 @@
+services:
+  iris_service:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./database:/app/database

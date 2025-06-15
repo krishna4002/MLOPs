@@ -1,0 +1,16 @@
+// grpc_server/iris.proto
+syntax = "proto3";
+
+service IrisService {
+  rpc SavePrediction (PredictionRequest) returns (PredictionResponse);
+}
+
+message PredictionRequest {
+  string model_type = 1; // "classification" or "regression"
+  string input_data = 2;
+  string prediction = 3;
+}
+
+message PredictionResponse {
+  string message = 1;
+}
