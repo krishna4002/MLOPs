@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package demotut;
+
+message Flower { 
+  float sepal_length = 1; 
+  float petal_length = 2; 
+  float sepal_width = 3; 
+  float petal_width = 4; 
+}
+
+message Prediction{
+  float pred = 1; 
+}
+service PredictionService{
+    rpc GetPrediction(Flower) returns (Prediction) {}
+}
