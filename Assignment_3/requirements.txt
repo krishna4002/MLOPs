@@ -3,3 +3,4 @@ scikit-learn
 joblib
 grpcio-tools
 flask
+kafka-python
