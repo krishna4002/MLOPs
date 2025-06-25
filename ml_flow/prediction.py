@@ -30,7 +30,7 @@ mlflow.set_tracking_uri("http://127.0.0.1:8080")
 
 
 # Or load by stage (make sure the model is in this stage via MLflow UI)
-model_uri = "models:/WineClassifier/2"
+model_uri = "models:/WineClassifier@champion"
 
 model = mlflow.sklearn.load_model(model_uri)
 
@@ -49,4 +49,4 @@ print(f"\n✅ Predicted Wine Class: {predicted_index} → {class_name}")
 
 # Optional: Show warning message explanation
 print("\n⚠️ If you saw a dependency warning (e.g. numpy version), run this to view model requirements:")
-print(f"   mlflow.pyfunc.get_model_dependencies('{model_uri}')")
+print(f"   mlflow.sklearn.get_model_dependencies('{model_uri}')")
